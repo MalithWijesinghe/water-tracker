@@ -2,7 +2,7 @@ import java.io.Serializable;
 
 public class UserData implements Serializable {
     private String userName;
-    private int weight;
+    private double weight;
     private int recommendedIntake;
     private int customIntake;
     private int currentIntake;
@@ -14,10 +14,10 @@ public class UserData implements Serializable {
         return this.userName;
     }
 
-    public void setWeight(int weight) {
+    public void setWeight(double weight) {
         this.weight = weight;
     }
-    public int getWeight() {
+    public double getWeight() {
         return this.weight;
     }
 
@@ -36,7 +36,7 @@ public class UserData implements Serializable {
     }
 
     public void setCurrentIntake(int currentIntake) {
-        this.currentIntake = currentIntake;
+        this.currentIntake += currentIntake;
     }
     public int getCurrentIntake() {
         return this.currentIntake;
